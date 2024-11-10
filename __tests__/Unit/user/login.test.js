@@ -1,9 +1,9 @@
 
-const { signIn } = require('../controllers/user.controller');
+const { signIn } = require('../../../controllers/user.controller');
 const bcrypt = require('bcrypt');
 jest.mock('bcrypt');
-jest.mock('../models/User');
-const User = require('../models/User');
+jest.mock('../../../models/User');
+const User = require('../../../models/User');
 describe('signIn', () => {
     it('should sign in a user and return status 200 for valid credentials', async () => {
         User.findOne.mockResolvedValue({

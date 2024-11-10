@@ -1,6 +1,6 @@
-const { signUp } = require("../controllers/user.controller");
-const User = require("../models/User");
-jest.mock("../models/User");
+const { signUp } = require('../../../controllers/user.controller');
+const User = require("../../../models/User");
+jest.mock('../../../models/User');
 describe("signUp", () => {
   it("should return status 200 for user register successfully ", async () => {
     User.findOne.mockResolvedValue(null);
